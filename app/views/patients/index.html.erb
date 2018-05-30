@@ -1,0 +1,26 @@
+<div>
+	<%= link_to root_path, class: 'go-back-btn' do %>
+		<i class="fas fa-arrow-circle-left"></i>
+		<span>Go Back</span>
+	<% end %>
+</div>
+
+<div class='search-header'>
+	<h1>Find a Patient</h1>
+</div>
+
+
+	<%= form_tag(search_patients_path, method: :get, id: 'search-form') do %>
+		<%= text_field_tag :search, params[:search], placeholder: "Search Patients", class: 'search-style' %>
+		<%= submit_tag 'Search', name: nil, class: 'search-button' %>
+	<% end %>
+
+
+<% if @patients.blank? %>
+	<h4>There were no records matchin your search.</h4>
+<% end %>
+
+<%= link_to '#', class: 'new-patient' do %>
+	<h1 class='new-patients-header'>New Patient</h1>
+	<i class="fas fa-plus-circle new-patient-icon"></i>
+<% end %>

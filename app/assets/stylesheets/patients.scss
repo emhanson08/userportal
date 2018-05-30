@@ -1,0 +1,80 @@
+// Place all the styles related to the patients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+	border-collapse: collapse;
+	margin: 8px 16px;
+	padding: 8px;
+}
+
+tr, td, th {
+	border: 1px solid lightgray;
+	text-align: left;
+	padding: 8px;
+	font-family: 'Muli', sans-serif;
+	color: #545454;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+h1 {
+	font-family: 'Muli', sans-serif;
+	padding: 8px;
+	margin-left: 8px;
+	color: #545454;
+}
+
+.go-back-btn {
+	text-decoration: none;
+	color: steelblue;
+	font-family: 'Muli', sans-serif;
+	padding: 8px;
+	margin: 10px;
+}
+
+.search-style {
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	padding-top: 5px;
+}
+
+.search-button {
+	padding: 5px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.new-patients-header {
+	display: flex;
+	justify-content: center;
+	&:hover {
+		text-decoration-line: underline;
+	}
+}
+
+.search-header {
+	display: flex;
+	justify-content: center;
+}
+
+.new-patient {
+	color: #545454;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	margin-top: 50px;
+
+	.new-patient-icon {
+		margin-top: 45px;
+		color: steelblue;
+		text-decoration: none;
+
+	}
+}
+

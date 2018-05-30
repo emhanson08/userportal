@@ -1,0 +1,24 @@
+<div class='body-wrapper'>
+	<div class='wrapper'>
+		<h1>Welcome To Your Portal</h1>
+
+		<div class='nav-wrapper'>
+
+			<%= link_to clinicians_path, class: 'nav-item' do %>
+				<i class="fas fa-stethoscope"></i>
+				<span>Clinicians</span>
+			<% end %>
+
+			<%= link_to patients_path, class: 'nav-item' do %>
+				<i class="fas fa-users"></i>
+				<span>Patients</span>
+			<% end %>
+
+			<%= link_to "#", class: 'nav-item' do %>
+				<i class="fas fa-calendar-alt"></i>
+				<span>Appointments</span>
+			<% end %>
+
+		</div>
+	</div>
+<div>

@@ -1,0 +1,43 @@
+<div>
+	<%= link_to root_path, class: 'go-back-btn' do %>
+		<i class="fas fa-arrow-circle-left"></i>
+		<span>Go Back</span>
+	<% end %>
+</div>
+
+
+<h1>Clinicians</h1>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Specialty</th>
+    <th>Days Working</th>
+    <th>Target Patients Per Day</th>
+    <th>Average Patients Seen Last Week</th>
+    <th>Meeting Target Patients Per Day?</th>
+  </tr>
+  <% @clinicians.each do |clinician| %>
+	  <tr>
+	  	<td><%= clinician.last_name %>,
+	  	<%= clinician.first_name %>
+	  	</td>
+	  	<td>
+	  		<%= clinician.all_specialties %>
+	  	</td>
+	  	<td>
+	  		<%= clinician.days_working %>
+	  	</td>
+	  	<td>
+	  		<%= clinician.target_patients_per_day %>
+	  	</td>
+	  	<td>
+	  		<%= clinician.weekly_average(clinician.most_recent_week_date)%>
+	  	</td>
+	  	<td>
+	  		<%= clinician.meeting_quota? %>
+	  	</td>
+	  </tr>
+  <% end %>
+</table>

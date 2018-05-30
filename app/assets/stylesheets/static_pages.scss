@@ -1,0 +1,47 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.body-wrapper {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	flex-flow: column nowrap;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-item {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: steelblue;
+	transition: 0.2s ease-out;
+
+	&:hover {
+		padding-top: 8px;
+	}
+}
+
+.nav-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.wrapper {
+
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 20px;
+	font-family: 'Muli', sans-serif;
+	overflow: hidden;
+
+	h1 {
+		text-align: center;
+		border-bottom: solid 1px lightgray;
+		padding-bottom: 8px;
+	}
+}
