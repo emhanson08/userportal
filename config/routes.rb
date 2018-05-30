@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 	root 'static_pages#index'
-
 	resources :patients do
 		collection do
 			get :search
