@@ -1,21 +1,21 @@
-
-table {
+.search-results-table {
 	border-collapse: collapse;
 	margin: 8px 16px;
 	padding: 8px;
+
+	.table-header-rows-data {
+		border: 1px solid lightgray;
+		text-align: left;
+		padding: 8px;
+		font-family: 'Muli', sans-serif;
+		color: #545454;	
+	}
+	
+	.search-row:nth-child(even) {
+		background-color: #dddddd;
+	}
 }
 
-tr, td, th {
-	border: 1px solid lightgray;
-	text-align: left;
-	padding: 8px;
-	font-family: 'Muli', sans-serif;
-	color: #545454;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
 
 h1 {
 	font-family: 'Muli', sans-serif;
@@ -77,5 +77,10 @@ h1 {
 
 .exception-error {
 	text-align: center;
+}
+
+.search-results-header {
+	color: #545454;
+	font-family: 'Muli', sans-serif;
 }
 

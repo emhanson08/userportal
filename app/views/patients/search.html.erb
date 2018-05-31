@@ -5,37 +5,41 @@
 	<% end %>
 </div>
 
-<h1>Search Results</h1>
+<h1 class='search-results-header'>Search Results</h1>
 
-<table>
-	<th>Name</th>
-	<th>Address</th>
-	<th>Email</th>
-	<th>Diagnosis</th>
-	<th>Referral Channel</th>
-	<th>Primary Clinician</th>
 
-	<% @patients.each do |patient| %>
-		<tr>
-			<td>
-				<%= patient.last_name %>
-				<%= patient.first_name %>
-			</td>
-			<td>
-				<%= patient.address %>
-			</td>
-			<td>
-				<%= patient.email %>
-			</td>
-			<td>
-				<%= patient.diagnosis %>
-			</td>
-			<td>
-				<%= patient.referral_channel %>
-			</td>
-			<td>
-				<%= patient.primary_clinician %>
-			</td>
-		<tr>
-	<% end %>
+<table class='search-results-table'>
+	<tbody class='table-headers-rows-data'>
+		<tr class="search-row">
+			<th>Name</th>
+			<th>Address</th>
+			<th>Email</th>
+			<th>Diagnosis</th>
+			<th>Referral Channel</th>
+			<th>Primary Clinician</th>
+		</tr>
+
+		<% @patients.each do |patient| %>
+			<tr class="search-row">
+				<td>
+					<%= patient.last_name %>, <%= patient.first_name %>
+				</td>
+				<td>
+					<%= patient.address %>
+				</td>
+				<td>
+					<%= patient.email %>
+				</td>
+				<td>
+					<%= patient.diagnosis %>
+				</td>
+				<td>
+					<%= patient.referral_channel %>
+				</td>
+				<td>
+					<%= patient.primary_clinician %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>

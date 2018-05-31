@@ -10,7 +10,7 @@
 
 
 <table>
-  <tr>
+  <tr class="table-row">
     <th>Name</th>
     <th>Specialty</th>
     <th>Days Working</th>
@@ -19,7 +19,7 @@
     <th>Meeting Target Patients Per Day?</th>
   </tr>
   <% @clinicians.each do |clinician| %>
-	  <tr>
+	  <tr class="table-row">
 	  	<td><%= clinician.last_name %>,
 	  	<%= clinician.first_name %>
 	  	</td>
