@@ -15,7 +15,7 @@
     <th>Specialty</th>
     <th>Days Working</th>
     <th>Target Patients Per Day</th>
-    <th>Average Patients Seen Last Week</th>
+    <th>Average Patients Seen Per Day Last Week</th>
     <th>Meeting Target Patients Per Day?</th>
   </tr>
   <% @clinicians.each do |clinician| %>
@@ -33,7 +33,7 @@
 	  		<%= clinician.target_patients_per_day %>
 	  	</td>
 	  	<td>
-	  		<%= clinician.weekly_average(clinician.most_recent_week_date)%>
+	  		<%= clinician.daily_average(clinician.most_recent_week_date)%>
 	  	</td>
 	  	<td>
 	  		<%= clinician.meeting_quota? %>

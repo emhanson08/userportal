@@ -3,7 +3,7 @@ class Clinician < ApplicationRecord
 	has_and_belongs_to_many :patients
 	has_many :appointments
 
-	def weekly_average(date)
+	def daily_average(date)
 		week = find_week(date)
 		counter = 0
 		appointments.find_each do |appt|
@@ -32,7 +32,7 @@ class Clinician < ApplicationRecord
 	end
 
 	def meeting_quota?
-		if self.weekly_average(self.most_recent_week_date) / self.days_working < self.target_patients_per_day
+		if self.daily_average(self.most_recent_week_date) < self.target_patients_per_day
 			return "No"
 		else
 			return "Yes"

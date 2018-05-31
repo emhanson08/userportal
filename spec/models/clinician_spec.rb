@@ -3,13 +3,13 @@ require 'date'
 
 RSpec.describe Clinician, type: :model do
   
-  describe 'weekly_average' do
-  	it 'given a date, should return the average number of clients seen over the previous week.' do
+  describe 'daily_average' do
+  	it 'given a date, should return the average number of clients seen per day over the previous week.' do
   		clinician = FactoryBot.create(:clinician, id: 1, days_working: 5)
   		patient = FactoryBot.create(:patient, id: 1)
   		appointment1 = FactoryBot.create(:appointment, clinician_id: clinician.id, patient_id: patient.id, date_of_service: "2017-03-01 08:00:00")
   		appointment2 = FactoryBot.create(:appointment, clinician_id: clinician.id, patient_id: patient.id, date_of_service: "2017-03-02 08:00:00")
-  		results = clinician.weekly_average("2017-03-09")
+  		results = clinician.daily_average("2017-03-09")
   		expect(results).to eq(0.4)
   	end
   end
